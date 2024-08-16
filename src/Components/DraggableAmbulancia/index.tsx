@@ -36,7 +36,10 @@ export default function DraggableAmbulancia({
                 border: "solid 1px black",
               }}
             />
-            <Typography>{ambulancia.name}</Typography>
+            <Typography>
+              {ambulancia.name +
+                (ambulancia.driver ? " - Motorista: " + ambulancia.driver : "")}
+            </Typography>
           </Box>
           <Box>
             <IconButton onClick={() => edit(index)}>
